@@ -74,6 +74,7 @@ async def search_knowledge(query: str = Form(...)):
 @app.get("/diagnosis/summary/{session_id}")
 async def get_diagnosis_summary(session_id: str):
     """获取诊断摘要"""
+    # TODO: 从会话中获取实际的诊断摘要
     # 这里应该从会话中获取诊断摘要
     # 暂时返回模拟数据
     return {

@@ -8,6 +8,7 @@ from typing import Dict, Any
 class TongueImageClassifier:
     """舌苔图像分类器"""
     def __init__(self):
+        # TODO: 加载预训练的ResNet18模型
         # 实际项目中应该加载预训练的ResNet18模型
         self.model = None
         self.classes = [
@@ -23,6 +24,7 @@ class TongueImageClassifier:
         Returns:
             包含分类结果和置信度的字典
         """
+        # TODO: 使用预训练模型进行实际预测
         # 模拟分类结果，实际项目中应该使用模型进行预测
         import random
         class_idx = random.randint(0, len(self.classes) - 1)
@@ -60,6 +62,7 @@ async def process_tongue_image(file: UploadFile) -> Dict[str, Any]:
     # 使用分类器进行预测
     result = await classifier.predict(file_path)
     
+    # TODO: 基于分类结果生成更详细的诊断建议
     # 添加基本的诊断建议（实际项目中应该基于分类结果生成更详细的建议）
     basic_suggestions = {
         "正常舌": ["舌象正常，注意保持良好的生活习惯"],

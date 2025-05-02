@@ -140,6 +140,7 @@ class InfoExtractor:
         Returns:
             提取的信息字典
         """
+        # TODO: 使用NLP模型（如DeepSeek-V3）进行信息提取
         # 实际项目中应该使用NLP模型（如DeepSeek-V3）进行信息提取
         # 这里使用简单的规则进行模拟
         info = {}
@@ -208,6 +209,7 @@ async def process_dialog(session_id: str, message: str, user_info: Optional[Dict
     if user_info:
         session["patient_info"].update(user_info)
     
+    # TODO: 使用大模型生成系统响应
     # 生成系统响应（实际项目中应该使用大模型生成）
     response = generate_response(session, message)
     
@@ -233,6 +235,7 @@ def generate_response(session: Dict[str, Any], message: str) -> str:
     Returns:
         系统响应
     """
+    # TODO: 使用大模型生成更智能的对话响应
     # 检查会话状态，决定下一步操作
     history = session["history"]
     patient_info = session["patient_info"]

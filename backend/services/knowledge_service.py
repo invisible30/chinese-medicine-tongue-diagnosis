@@ -12,6 +12,7 @@ class VectorDatabase:
     
     def load_documents(self) -> None:
         """加载知识库文档"""
+        # TODO: 实现从向量数据库加载文档的功能
         # 实际项目中应该从向量数据库加载文档
         # 这里使用模拟数据
         os.makedirs(self.db_path, exist_ok=True)
@@ -64,6 +65,7 @@ class VectorDatabase:
         Returns:
             搜索结果列表
         """
+        # TODO: 实现向量相似度搜索功能
         # 实际项目中应该使用向量相似度搜索
         # 这里使用简单的关键词匹配
         results = []
@@ -82,6 +84,7 @@ vector_db = VectorDatabase()
 class WebSearchService:
     """网络搜索服务"""
     def __init__(self):
+        # TODO: 配置搜索引擎API
         # 实际项目中应该配置搜索引擎API（如百度API、Serper API）
         pass
     
@@ -95,6 +98,7 @@ class WebSearchService:
         Returns:
             搜索结果列表
         """
+        # TODO: 实现调用搜索引擎API的功能
         # 模拟搜索结果
         # 实际项目中应该调用搜索引擎API
         results = [
@@ -150,6 +154,7 @@ async def generate_report(tongue_class: str, patient_info: Dict[str, Any]) -> Di
     # 搜索相关知识
     knowledge = await search_knowledge_base(tongue_class)
     
+    # TODO: 使用大模型生成结构化诊断报告
     # 生成报告（实际项目中应该使用大模型生成）
     report = {
         "patient_summary": {
