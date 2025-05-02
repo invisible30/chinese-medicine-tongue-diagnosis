@@ -1,0 +1,55 @@
+/* 智能舌苔诊断系统主样式文件 */
+
+:root {
+  --primary-color: #1e88e5;
+  --primary-dark: #1976d2;
+  --text-color: #333;
+  --background-color: #f5f5f5;
+  --card-background: #ffffff;
+  --border-color: #eeeeee;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* 全局按钮样式 */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 全局卡片样式 */
+.card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+/* 响应式布局辅助类 */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+}
